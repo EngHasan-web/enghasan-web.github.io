@@ -1,1 +1,241 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة إدارة موقع حسن عصام</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #08111f;
+      color: #f0f6ff;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #101d30;
+      padding: 22px;
+      border-bottom: 2px solid #42e8bd;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #42e8bd;
+      font-size: 25px;
+    }
+
+    header p {
+      margin-bottom: 0;
+      color: #b7c7da;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 0 16px;
+    }
+
+    .notice {
+      padding: 16px;
+      border: 1px solid #42e8bd;
+      background: #102b30;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: #101d30;
+      border: 1px solid #263a52;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #42e8bd;
+      font-size: 21px;
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #40536c;
+      background: #08111f;
+      color: white;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+    }
+
+    button, .back {
+      display: inline-block;
+      padding: 12px 18px;
+      margin-top: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #42e8bd;
+      color: #08111f;
+      font-weight: bold;
+      font-size: 15px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .muted {
+      color: #b7c7da;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #b7c7da;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>لوحة إدارة الموقع</h1>
+  <p>Hasan Esam Mahmood Abdulhameed</p>
+</header>
+
+<main>
+
+  <div class="notice">
+    <strong>مرحبًا حسن!</strong>
+    <p>
+      هذه واجهة أولية لتنظيم محتوى موقعك الشخصي.
+      لم يتم ربطها بعد بنظام تسجيل الدخول أو حفظ الملفات.
+    </p>
+  </div>
+
+  <section class="card">
+    <h2>👤 المعلومات الشخصية</h2>
+
+    <label for="name">الاسم الكامل بالإنجليزية</label>
+    <input id="name" value="Hasan Esam Mahmood Abdulhameed">
+
+    <label for="altname">الاسم البديل</label>
+    <input id="altname" value="Hasan Esam Mahmoud">
+
+    <label for="specialty">التخصص</label>
+    <input id="specialty" value="Cybersecurity">
+
+    <label for="university">الجامعة</label>
+    <input id="university" value="National University">
+
+    <label for="graduation">سنة التخرج</label>
+    <input id="graduation" value="2026">
+
+    <label for="email">البريد الإلكتروني</label>
+    <input id="email" type="email" value="hasan123essam@gmail.com">
+
+    <label for="bio">نبذة عنك</label>
+    <textarea id="bio" placeholder="اكتب نبذتك المهنية هنا"></textarea>
+
+    <p class="muted">
+      الحقول أعلاه للعرض التجريبي فقط؛ لن تُحفظ التعديلات على الموقع حتى نربط نظام الحفظ.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>📸 الصورة الشخصية</h2>
+
+    <label for="photo">اختر صورتك من الهاتف</label>
+    <input id="photo" type="file" accept="image/*">
+
+    <p class="muted">
+      هذا الحقل يتيح اختيار صورة للمعاينة لاحقًا، لكنه لا يرفعها إلى الموقع بعد.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🏆 الإنجازات والشهادات</h2>
+
+    <label for="achievement">عنوان الإنجاز</label>
+    <input id="achievement"
+      value="First Place (Gold) — Innovation Prototypes">
+
+    <label for="conference">اسم المؤتمر</label>
+    <input id="conference"
+      value="4th Student Research & Innovation Conference (4SRIC) 2025–2026">
+
+    <label for="certificate">صورة الشهادة</label>
+    <input id="certificate" type="file" accept="image/*">
+
+    <p class="muted">
+      سنضيف لاحقًا وظيفة رفع الشهادة وحفظها وعرضها في قسم الإنجازات.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>📄 السيرة الذاتية</h2>
+
+    <label for="cv">اختر ملف السيرة الذاتية PDF</label>
+    <input id="cv" type="file" accept=".pdf,application/pdf">
+
+    <p class="muted">
+      يمكنك اختيار الملف هنا، لكن رفعه وحفظه يتطلبان ربط خدمة التخزين.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>🛡️ مشروع SENTINEL</h2>
+
+    <label for="projectTitle">اسم المشروع</label>
+    <input id="projectTitle" value="SENTINEL">
+
+    <label for="projectDescription">وصف المشروع</label>
+    <textarea id="projectDescription">An integrated cyber-physical defense system for detecting DoS attacks and supporting malware analysis through cloud intelligence and structural analysis of PE files.</textarea>
+  </section>
+
+  <section class="card">
+    <h2>🌐 روابط الموقع</h2>
+
+    <p>
+      <strong>الموقع العام:</strong><br>
+      <a class="back" href="../" target="_blank">فتح الموقع الشخصي</a>
+    </p>
+
+    <p>
+      <strong>GitHub:</strong><br>
+      <a class="back" href="https://github.com/EngHasan-web"
+         target="_blank" rel="noopener noreferrer">
+        فتح حساب GitHub
+      </a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  لوحة الإدارة الأولية — Hasan Esam Mahmood Abdulhameed
+</footer>
+
+</body>
+</html>
