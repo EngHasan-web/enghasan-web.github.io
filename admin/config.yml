@@ -1,1 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
 
+media_folder: "uploads"
+public_folder: "/uploads"
+
+locale: "ar"
+
+collections:
+  - name: "profile"
+    label: "معلوماتي الشخصية"
+    files:
+      - name: "personal"
+        label: "بياناتي"
+        file: "content/profile.json"
+        fields:
+          - { label: "الاسم الكامل", name: "name", widget: "string" }
+          - { label: "التخصص", name: "specialty", widget: "string" }
+          - { label: "الجامعة", name: "university", widget: "string" }
+          - { label: "سنة التخرج", name: "graduation", widget: "string" }
+          - { label: "نبذة عني", name: "bio", widget: "text" }
+          - { label: "البريد الإلكتروني", name: "email", widget: "string" }
+          - { label: "صورتي الشخصية", name: "photo", widget: "image", required: false }
+          - { label: "السيرة الذاتية PDF", name: "cv", widget: "file", required: false }
